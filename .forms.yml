@@ -1,0 +1,15 @@
+---
+default:
+  pipeline:
+    Cycloid-API:
+      - name: "Cycloid api url"
+        description: "Url of the Cycloid API to use"
+        key: cycloid_api_url
+        widget: simple_text
+        type: string
+        default: https://http-api.cycloid.io
+      - name: "Cycloid api key"
+        key: cycloid_api_key
+        widget: cy_cred
+        type: string
+        default: "((custom_api-key.key))"
