@@ -1,6 +1,14 @@
 ---
 default:
   pipeline:
+    Config:
+      - name: "Excludes"
+        description: "List of project canonical to exclude from the report"
+        key: exclude_projects
+        widget: text_area
+        type: array
+        default: []
+
     Cycloid-API:
       - name: "Cycloid api url"
         description: "Url of the Cycloid API to use"

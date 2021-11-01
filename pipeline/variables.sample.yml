@@ -6,6 +6,10 @@ cycloid_api_key: ((custom_api-key.key))
 #+ Cycloid API URL
 cycloid_api_url: https://http-api.cycloid.io
 
+#. exclude_projects: []
+#+ List of project canonical to exclude from the report
+exclude_projects: []
+
 #
 # Default variables that shouldn't be changed except if needed
 #
@@ -21,4 +25,3 @@ project: ($ project $)
 #. organization (required): ($ organization_canonical $)
 #+ Name of the Cycloid Organization.
 organization: ($ organization_canonical $)
-
