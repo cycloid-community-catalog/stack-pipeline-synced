@@ -11,3 +11,5 @@ This stack require to provide a Cycloid API key in a credential.
 The pipeline will run a periodical job which will list all your organization projects.
 For each project using Cycloid CLI, the job will check if all environments pipelines are
 up-to-date from the pipeline template contained in the stack.
+
+If some pipelines are not up-to-date it will send a Cycloid event.
