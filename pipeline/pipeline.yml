@@ -43,7 +43,7 @@ jobs:
                     echo " - "$ENV
 
                     # Check if pipeline is synced
-                    IS_SYNCED=$(cy pipeline synced --org "$ORG" --project $PROJECT --env $ENV -o json 2>/dev/null | jq -r '[.[]] | all(. == null)')
+                    IS_SYNCED=$(cy pipeline synced --org "$ORG" --project $PROJECT --env $ENV -o json 2>/dev/null | jq -r '.data.synced == "synced"')
 
                     # If not synced prepare project report content in HTML format
                     if [[ "$IS_SYNCED" == "false" ]]; then
